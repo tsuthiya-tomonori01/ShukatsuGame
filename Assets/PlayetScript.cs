@@ -40,7 +40,6 @@ public class PlayetScript : MonoBehaviour
         float MouseX = Input.GetAxis("Mouse X");
         playerMove(MouseX);
 
-        //í èÌà⁄ìÆ
         if (Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Mode", true);
@@ -70,13 +69,13 @@ public class PlayetScript : MonoBehaviour
             Quaternion.Euler(0, 0, 0);
         }
 
+    }
 
-        //ÉWÉÉÉìÉv
+    void FixedUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             JumpFlag = true;
-
-
 
             if (JumpFlag == true)
             {
@@ -85,11 +84,5 @@ public class PlayetScript : MonoBehaviour
                 JumpFlag = false;
             }
         }
-
-    }
-
-    void FixedUpdate()
-    {
-
     }
 }
