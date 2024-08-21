@@ -18,6 +18,8 @@ public class PlayetScript : MonoBehaviour
 
     private bool JumpFlag = false;
 
+    int PlayerHP = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,5 +86,10 @@ public class PlayetScript : MonoBehaviour
                 JumpFlag = false;
             }
         }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+       
     }
 }
